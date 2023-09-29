@@ -462,7 +462,7 @@ static NSMutableArray<CTInAppDisplayViewController*> *pendingNotificationControl
             } error:nil];
 #endif
         } else if (class_getInstanceMethod(cls, NSSelectorFromString(@"application:openURL:options:"))) {
-(*             sel = NSSelectorFromString(@"application:openURL:options:");
+/*             sel = NSSelectorFromString(@"application:openURL:options:");
             __block NSInvocation *invocation = nil;
             invocation = [cls ct_swizzleMethod:sel withBlock:^(id obj, UIApplication *application, NSURL *url, NSDictionary<UIApplicationOpenURLOptionsKey, id> *options ) {
                 [[self class] ct_application:application openURL:url options:options];
@@ -470,7 +470,7 @@ static NSMutableArray<CTInAppDisplayViewController*> *pendingNotificationControl
                 [invocation setArgument:&url atIndex:3];
                 [invocation setArgument:&options atIndex:4];
                 [invocation invokeWithTarget:obj];
-            } error:nil]; *)
+            } error:nil]; */
         } else {
             if (@available(iOS 9.0, *)) {
                 sel = NSSelectorFromString(@"application:openURL:options:");
